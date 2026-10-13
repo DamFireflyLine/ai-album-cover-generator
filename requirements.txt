@@ -1,0 +1,18 @@
+# ai-album-cover-generator — runtime dependencies
+# Python 3.11+ required. Tested on 3.11 and 3.12.
+
+PySide6==6.7.2
+numpy==1.26.4
+Pillow==10.4.0
+pydantic==2.8.2
+tomli==2.0.1 ; python_version < "3.11"
+tomli-w==1.0.0
+httpx==0.27.0
+tenacity==8.5.0
+rich==13.7.1
+watchdog==4.0.1
+# diffusion backend — optional, pulled lazily by the sdxl_renderer extension
+diffusers==0.30.0
+torch==2.4.0
+transformers==4.44.0
+accelerate==0.33.0
