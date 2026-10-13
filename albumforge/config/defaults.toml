@@ -1,0 +1,41 @@
+# AlbumForge default configuration.
+# User overrides live in %APPDATA%/AlbumForge/config.toml and are merged
+# on top of this file at startup. Never edit this file to change behavior —
+# edit the user config. This file is the floor, not the ceiling.
+
+[app]
+name = "AlbumForge"
+log_level = "info"
+theme = "dark"
+autosave_interval_seconds = 120
+
+[paths]
+models_dir = "models"
+output_dir = "output"
+cache_dir = "cache"
+extensions_dir = "albumforge/extensions"
+
+[render]
+default_width = 1024
+default_height = 1024
+default_steps = 28
+default_guidance = 7.0
+default_sampler = "dpmpp_2m"
+max_batch = 4
+
+[render.vram]
+# "auto" picks a tier based on detected VRAM at startup.
+# Override with "low" | "medium" | "high" if auto-detection is wrong.
+tier = "auto"
+enable_attention_slicing = true
+enable_vae_tiling = false
+
+[export]
+default_format = "png"
+jpeg_quality = 95
+embed_metadata = true
+
+[plugins]
+# Extensions listed here are force-disabled even if present on disk.
+# Useful for bisecting a crash. Empty by default.
+disabled = []
